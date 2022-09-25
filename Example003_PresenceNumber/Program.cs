@@ -20,13 +20,24 @@ while (index < count)
 }
 // Console.WriteLine();
 index = 0; // обнуление объявленной выше переменной (без int)
+bool flag = false;
 while (index < count)
 {
     if (array[index] == find)
     {
-        Console.WriteLine($"\nЧисло {find} найдено"); // \n добавляет переход на новую строку перед текстом
+        flag = true;
     }
     index++;
 }
-
-Console.WriteLine("\nEnd"); // всегда с новой строки
+// if (flag == true) читается как "если истина равна истине"
+// так писать не принято
+// при обратной задаче будет записываться 
+// if (!flag) если не true/false
+if (flag)
+{
+    Console.WriteLine($"\nТакое число есть"); // \n добавляет переход на новую строку перед текстом
+}
+else
+{
+    Console.WriteLine($"\nТакого числа нет");
+}
